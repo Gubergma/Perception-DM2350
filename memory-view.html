@@ -9,11 +9,11 @@
   <title>ULTIMATE COLOR SCHEMA TEST OF DOOM</title>
   <style type="text/css">
     .img-div{
-      height: 200px;
+      height: 150px;
+      margin-top: 20px;
     }
     .memory-image {
-      max-height: 200px;
-      max-width: 200px;
+      max-height: 130px;
     }
     label:before {
       content: url("https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/unchecked_checkbox.png");
@@ -34,27 +34,36 @@
 
 <body>
   <h1 class="text-center">Choose the items you remember from the list</h1>
-  <form action="">
+  <form id="quizForm" action="">
     <div class="container img-container">
     </div>
-    <button type="submit">Submit</button>
+
+    <div class="row text-center" style="margin-top: 20px"><button class="btn-lg" type="submit">Submit</button></div>  
   </form>
     
 </body>
 
 <script src="model.js"></script>
+
 <script type="text/javascript">
-  
 var allTheImages = ``;
 for (i = 0; i < items.length; i++) {
-  allTheImages += `<div class="img-div col-md-3">
-    <input id="img${i+1}" type="checkbox" name="item${i+1}" value="${i+1}">
-    <label for="img${i+1}"><img class="memory-image" src="${items[i].image}"></label>
+  allTheImages += `<div class="img-div col-md-3 text-center">
+    <input id="img${i}" type="checkbox" name="item${i}" value="${i}">
+    <label for="img${i}"><img class="memory-image" src="${items[i].image}"></label>
   </div>` 
 }
 
-$('.img-container').html(allTheImages);  
+$('.img-container').html(allTheImages);
 
+$("button").click(function(event){
+    event.preventDefault();
+    var chosenItems = $("#quizForm input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+
+    console.log(chosenItems); // chosenItems är en array som har alla valda items
+});
 
 </script>
 </html>

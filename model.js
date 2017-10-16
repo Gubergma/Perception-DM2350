@@ -1,12 +1,12 @@
 
-function saveResult(subjectId, colorType, chosenObjects, listItems){
+function saveResult(subjectId, test, chosenObjects, listItems){
 	// chosenObject and listItems []
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
 		subject: subjectId,
-		type: colorType
+		type: test
 	};
 	for (i = 0; i < chosenObjects.length; i++) {
 		var found = false;
@@ -44,82 +44,82 @@ function saveResult(subjectId, colorType, chosenObjects, listItems){
 
 var items = [
 	{
-		id: 1,
+		id: 0,
 		name: 'Eggs',
 		image: 'images/egg.jpg'
 	},
 	{
-		id: 2,
+		id: 1,
 		name: 'Apple',
 		image: 'images/apple.jpg'
 	},
 	{
-		id: 3,
+		id: 2,
 		name: 'Cucumber',
 		image: 'images/cucumber.jpg'
 	},
 	{
-		id: 4,
+		id: 3,
 		name: 'Juice',
 		image: 'images/juice.jpg'
 	},
 	{
-		id: 5,
+		id: 4,
 		name: 'Meat',
 		image: 'images/meat.jpg'
 	},
 	{
-		id: 6,
+		id: 5,
 		name: 'Milk',
 		image: 'images/milk.jpg'
 	},
 	{
-		id: 7,
+		id: 6,
 		name: 'Pear',
 		image: 'images/pear.jpg'
 	},
 	{
-		id: 8,
-		name: 'Sundried',
+		id: 7,
+		name: 'Sundried tomatoes',
 		image: 'images/sundried.jpg'
 	},
 	{
-		id: 9,
+		id: 8,
 		name: 'Banana',
 		image: 'images/banana.jpg'
 	},
 	{
-		id: 10,
+		id: 9,
 		name: 'Butter',
 		image: 'images/butter.jpg'
 	},
 	{
-		id: 11,
+		id: 10,
 		name: 'Cheese',
 		image: 'images/cheese.jpg'
 	},
 	{
-		id: 12,
+		id: 11,
 		name: 'Tomato',
 		image: 'images/tomato.jpg'
 	},
 	{
-		id: 13,
+		id: 12,
 		name: 'Flour',
 		image: 'images/flour.jpg'
 	},
 	{
-		id: 14,
+		id: 13,
 		name: 'Sugar',
 		image: 'images/sugar.jpg'
 	},
 	{
-		id: 15,
+		id: 14,
 		name: 'Tooth Paste',
 		image: 'images/toothpaste.jpg'
 	},
 	{
-		id: 16,
+		id: 15,
 		name: 'Fish',
 		image: 'images/fish.jpg'
 	}
