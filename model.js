@@ -1,10 +1,11 @@
+
 function saveResult(subjectId, colorType, chosenObjects, listItems){
 	// chosenObject and listItems []
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
-		subject: subjectId
+		subject: subjectId,
 		type: colorType
 	};
 	for (i = 0; i < chosenObjects.length; i++) {
@@ -16,9 +17,9 @@ function saveResult(subjectId, colorType, chosenObjects, listItems){
 			}
 		}
 		if (found){
-			foundItems.append(chosenObjects[i]);
+			foundItems.push(chosenObjects[i]);
 		} else {
-			wrongAnswer.append(chosenObjects[i])
+			wrongAnswers.push(chosenObjects[i])
 		}
 	}
 	for (i = 0; i < listItems.length; i++){
@@ -30,8 +31,22 @@ function saveResult(subjectId, colorType, chosenObjects, listItems){
 			}
 		}
 		if (missed){
-			missedItems.append(listItems[i])
+			missedItems.push(listItems[i])
 		}
 	}
-		
+	result.foundItems = foundItems;
+	result.missedItems = missedItems;
+	result.wrongAnswers = wrongAnswers;
+	return result
 }
+
+
+
+var items = [
+	egg = {
+		id: 1,
+		name: 'Eggs',
+		image: 'images/agg.jpg'
+	}
+]
+console.log(items[0])
