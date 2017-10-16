@@ -46,7 +46,7 @@ var items = [
 	{
 		id: 1,
 		name: 'Eggs',
-		image: 'images/agg.jpg'
+		image: 'images/egg.jpg'
 	},
 	{
 		id: 2,
@@ -80,7 +80,7 @@ var items = [
 	},
 	{
 		id: 8,
-		name: 'Sundried'
+		name: 'Sundried',
 		image: 'images/sundried.jpg'
 	},
 	{
@@ -103,7 +103,7 @@ var items = [
 		name: 'Tomato',
 		image: 'images/tomato.jpg'
 	},
-	flour: {
+	{
 		id: 13,
 		name: 'Flour',
 		image: 'images/flour.jpg'
@@ -125,4 +125,3 @@ var items = [
 	}
 ]
 
-console.log(items[0])

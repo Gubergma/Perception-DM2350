@@ -8,6 +8,9 @@
 
   <title>ULTIMATE COLOR SCHEMA TEST OF DOOM</title>
   <style type="text/css">
+    .img-div{
+      height: 200px;
+    }
     .memory-image {
       max-height: 200px;
       max-width: 200px;
@@ -23,63 +26,35 @@
     input[type=checkbox] {
       display: none;
     }
-    /*pure cosmetics:*/
-    img {
-      width: 150px;
-      height: 150px;
-    }
     label {
       margin: 10px;
     }
   </style>
 </head>
+
 <body>
-  <h1 class="text-center">Choose things that was on the list</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <input id="img1" type="checkbox" name="checkbox1">
-        <label for="img1"><img class=" memory-image" src="images/agg.jpg"></label>
-      </div>
-      <div class=" col-md-4">
-        <input id="img2" type="checkbox" name="checkbox1">
-        <label for="img2"><img class=" memory-image" src="images/gurka.jpg"></label>   
-      </div>
-      <div class=" col-md-4">
-        <input id="img3" type="checkbox" name="checkbox1">
-        <label for="img3"><img class=" memory-image" src="images/apple.jpg"></label>
-      </div>
+  <h1 class="text-center">Choose the items you remember from the list</h1>
+  <form action="">
+    <div class="container img-container">
     </div>
-    <div class="row">
-      <div class=" col-md-4">
-        <input id="img4" type="checkbox" name="checkbox1">
-        <label for="img4"><img class=" memory-image" src="images/kottfars.jpg"></label>
-      </div>
-      <div class=" col-md-4">
-        <input id="img5" type="checkbox" name="checkbox1">
-        <label for="img5"><img class=" memory-image" src="images/mjolk.jpg"></label>
-      </div>
-      <div class=" col-md-4">
-        <input id="img6" type="checkbox" name="checkbox1">
-        <label for="img6"><img class=" memory-image" src="images/juice.jpg"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <input id="img7" type="checkbox" name="checkbox1">
-        <label for="img7"><img class=" memory-image" src="images/paron.jpg"></label>
-      </div>
-      <div class=" col-md-4">
-        <input id="img8" type="checkbox" name="checkbox1">
-        <label for="img8"><img class=" memory-image" src="images/soltorktomat.jpg"></label>
-      </div>
-      <div class=" col-md-4">
-        <input id="img9" type="checkbox" name="checkbox1">
-        <label for="img9"><img class=" memory-image" src="images/agg.jpg"></label>
-      </div>
-    </div>
-	</div>
+    <button type="submit">Submit</button>
+  </form>
+    
 </body>
 
 <script src="model.js"></script>
+<script type="text/javascript">
+  
+var allTheImages = ``;
+for (i = 0; i < items.length; i++) {
+  allTheImages += `<div class="img-div col-md-3">
+    <input id="img${i+1}" type="checkbox" name="item${i+1}" value="${i+1}">
+    <label for="img${i+1}"><img class="memory-image" src="${items[i].image}"></label>
+  </div>` 
+}
+
+$('.img-container').html(allTheImages);  
+
+
+</script>
 </html>
