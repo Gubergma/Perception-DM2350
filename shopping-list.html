@@ -71,7 +71,7 @@
   			<form id="quizForm">
     			<div class="img-container"></div>
 				<div class="row text-center" style="margin-top: 20px">
-					<button id="quizSubmit"class="btn-lg" type="submit" onclick="showHoldUp()">Submit</button>
+					<button id="quizSubmit" class="btn btn-lg" type="submit" onclick="showHoldUp()">Submit</button>
 				</div>  
   			</form>
   		</div>
@@ -81,7 +81,7 @@
 	  		<button class="btn-lg" onclick="nextQuiz()" style="font-family: Lato;">GO!</button>
 	  	</div>
 	  	<div class="end" style="display: none;">
-	  	<h1>You are all done! Thank you for participating!</h1>
+	  		<h1>You are all done! Thank you for participating!</h1>
 	  	</div>
 	  	<div class="welcome">
 	  		<p style="color: black;">Blablabla Perception DM2350 blablabla. You will now blablablalba. Color perception something something. Hej och hå braldjksajdkl. Testar layout när det är mycket text så måste fortsätta skriva lite lorem ipsum bullshit. Bacon är inte så gott.</p>
@@ -118,12 +118,12 @@ function testTwo(){
 }
 testTwo();
 function testThree(){
-	$('#12').html(items[1].name);
+	$('#12').html(items[6].name);
 	$('#22').html(items[2].name);
 	$('#32').html(items[3].name);
 	$('#42').html(items[5].name);
 	$('#52').html(items[4].name);
-	$('#62').html(items[6].name);
+	$('#62').html(items[1].name);
 	$('#72').html(items[7].name);
 	$('#82').html(items[8].name);
 	$('#92').html(items[9].name);
@@ -136,7 +136,7 @@ function testFour(){
 	$('#43').html(items[13].name);
 	$('#53').html(items[14].name);
 	$('#63').html(items[15].name);
-	$('#73').html(items[15].name);
+	$('#73').html(items[8].name);
 	$('#83').html(items[0].name);
 	$('#93').html(items[1].name);
 }
@@ -145,7 +145,7 @@ testFour();
 var allTheImages = ``;
 for (i = 0; i < items.length; i++) {
   allTheImages += `<div class="img-div col-md-3 text-center">
-    <input id="img${i}" type="checkbox" name="item${i}" value="${i}">
+    <input id="img${i}" class="checkboxes" type="checkbox" name="item${i}" value="${i}">
     <label for="img${i}"><img class="memory-image" src="${items[i].image}"></label>
   </div>` 
 }
@@ -157,7 +157,9 @@ $("#quizSubmit").click(function(event){
     var chosenItems = $("#quizForm input:checkbox:checked").map(function(){
       return $(this).val();
     }).get();
+    $('.checkboxes').prop('checked', false)
     console.log(chosenItems); // chosenItems är en array som har alla valda items
+    // Gör anrop till result med chosen items
 });
 
 
