@@ -1,12 +1,16 @@
+var testOne = [0,9,4,6,7,3,8,2,10]
+var testTwo = [15,13,3,9,1,5,11,12,8]
+var testThree = [6,2,3,5,4,1,7,8,9]
+var testFour = [10,11,12,13,14,15,8,0,1]
 
-function saveResult(subjectId, test, chosenObjects, listItems){
+function saveResult(subjectId, colorType, chosenObjects, listItems){
 	// chosenObject and listItems []
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
 		subject: subjectId,
-		type: test
+		type: colorType
 	};
 	for (i = 0; i < chosenObjects.length; i++) {
 		var found = false;
