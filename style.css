@@ -3,7 +3,6 @@
 
 .container{
 text-align: center;
-font-family: 'Shadows Into Light';
 }
 
 .header{
@@ -11,6 +10,7 @@ font-family: 'Shadows Into Light';
 	width: 50%;
 	margin: auto;
 	margin-bottom: 20px;
+	font-family: 'Shadows Into Light';
 }
 .header > h1{
 	font-size: 60px;

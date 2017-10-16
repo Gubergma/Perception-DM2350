@@ -68,16 +68,24 @@
 
 		<div class="quizView" style="display: none;">
  			<h1 class="text-center">Choose the items you remember from the list</h1>
-  			<form id="quizForm" onsubmit="showHoldUp()">
+  			<form id="quizForm">
     			<div class="img-container"></div>
-				<div class="row text-center" style="margin-top: 20px"><button class="btn-lg" type="submit">Submit</button></div>  
+				<div class="row text-center" style="margin-top: 20px">
+					<button id="quizSubmit"class="btn-lg" type="submit" onclick="showHoldUp()">Submit</button>
+				</div>  
   			</form>
   		</div>
 
-  		<div class="middleView">
-	  		<h1>Hold up</h1>
-	  		<p>Press when ready</p>
-	  		<button class="btn-lg" onclick="nextQuiz()">GO!</button>
+  		<div class="middleView" style="display: none">
+	  		<h1 style="font-family: Lato">Are you ready?</h1>
+	  		<button class="btn-lg" onclick="nextQuiz()" style="font-family: Lato;">GO!</button>
+	  	</div>
+	  	<div class="end" style="display: none;">
+	  	<h1>You are all done! Thank you for participating!</h1>
+	  	</div>
+	  	<div class="welcome">
+	  		<p style="color: black;">Blablabla Perception DM2350 blablabla. You will now blablablalba. Color perception something something. Hej och hå braldjksajdkl. Testar layout när det är mycket text så måste fortsätta skriva lite lorem ipsum bullshit. Bacon är inte så gott.</p>
+	  		<button class="btn-lg" style="font-family: Lato;" onclick="showHoldUp()">Start</button>
 	  	</div>
     </div>			  
 </body>
@@ -143,6 +151,15 @@ for (i = 0; i < items.length; i++) {
 }
 
 $('.img-container').html(allTheImages);
+
+$("#quizSubmit").click(function(event){
+    event.preventDefault();
+    var chosenItems = $("#quizForm input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+    console.log(chosenItems); // chosenItems är en array som har alla valda items
+});
+
 
 </script>
 </html>
