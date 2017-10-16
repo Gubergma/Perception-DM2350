@@ -7,32 +7,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <title>ULTIMATE COLOR SCHEMA TEST OF DOOM</title>
-  <style type="text/css">
-    .img-div{
-      height: 150px;
-      margin-top: 20px;
-    }
-    .memory-image {
-      max-height: 130px;
-    }
-    label:before {
-      content: url("https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/unchecked_checkbox.png");
-      position: absolute;
-      z-index: 100;
-    }
-    :checked+label:before {
-      content: url("https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/checked_checkbox.png");
-    }
-    input[type=checkbox] {
-      display: none;
-    }
-    label {
-      margin: 10px;
-    }
-  </style>
+
 </head>
 
 <body>
+<div class="quizView">
   <h1 class="text-center">Choose the items you remember from the list</h1>
   <form id="quizForm" action="">
     <div class="container img-container">
@@ -40,7 +19,7 @@
 
     <div class="row text-center" style="margin-top: 20px"><button class="btn-lg" type="submit">Submit</button></div>  
   </form>
-    
+  </div>
 </body>
 
 <script src="model.js"></script>

@@ -1,8 +1,14 @@
 var time = 7000; //amount of time the containter will be visable
 
-function hideView() {
-	var shoppingList = $('.shopping-list');
-	shoppingList.hide();
+function listToQuiz() {
+	$('.all-lists').hide();
+	$('.quizView').show();
 }
 
-setTimeout(hideView, time); //hides container after 7000 ms
+setTimeout(listToQuiz, time); //hides container after 7000 ms
+
+
+//ADD: Submit on Quiz-view - Show List, hide quiz
+
+
+

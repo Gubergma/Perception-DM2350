@@ -12,23 +12,142 @@
   </head>
 
   <script src="view-ctrl.js"></script>
+  <script src="model.js"></script>
 
 <body>
 	<div class="container">
 		<div class="header">
 		<h1>GROCERY LIST</h1>
 		</div>
-	<div class="shopping-list">
-			 <p style="background-color: blue;">Coffee</p>
-			 <p style="background-color: red;">Tea</p>
-			 <p style="background-color: green;">Milk</p>
-			 <p style="background-color: blue;">Beef</p>
-			 <p style="background-color: red;">Juice</p>
-			 <p style="background-color: green;">Banana</p>
-			 <p style="background-color: blue;">Coffee</p>
-			 <p style="background-color: red;">Tea</p>
-			 <p style="background-color: green;">Milk</p>
-		</div>
+	<div class="all-lists">	
+	<div class="shopping-list-1">
+			 <p id="1" style="background-color: #fc1520;"></p>
+			 <p id="2" style="background-color: #c86162;"></p>
+			 <p id="3" style="background-color: #89171a;"></p>
+			 <p id="4" style="background-color: #fc1520;"></p>
+			 <p id="5" style="background-color: #c86162;"></p>
+			 <p id="6" style="background-color: #89171a;"></p>
+			 <p id="7" style="background-color: #fc1520;"></p>
+			 <p id="8" style="background-color: #c86162;"></p>
+			 <p id="9" style="background-color: #89171a;"></p>
+	</div>
+		<div class="shopping-list-2">
+			 <p id="11" style="background-color: #b04244;"></p>
+			 <p id="21" style="background-color: #c64c4e;"></p>
+			 <p id="31" style="background-color: #df5658;"></p>
+			 <p id="41" style="background-color: #b04244;"></p>
+			 <p id="51" style="background-color: #c64c4e;"></p>
+			 <p id="61" style="background-color: #df5658;"></p>
+			 <p id="71" style="background-color: #b04244;"></p>
+			 <p id="81" style="background-color: #c64c4e;"></p>
+			 <p id="91" style="background-color: #df5658;"></p>
+	</div>
+		<div class="shopping-list-3">
+			 <p id="12" style="background-color: #2cfd33;"></p>
+			 <p id="22" style="background-color: #77c865;"></p>
+			 <p id="32" style="background-color: #308920;"></p>
+			 <p id="42" style="background-color: #2cfd33;"></p>
+			 <p id="52" style="background-color: #77c865;"></p>
+			 <p id="62" style="background-color: #308920;"></p>
+			 <p id="72" style="background-color: #2cfd33;"></p>
+			 <p id="82" style="background-color: #77c865;"></p>
+			 <p id="92" style="background-color: #308920;"></p>
+	</div>
+		<div class="shopping-list-4">
+			 <p id="13" style="background-color: #76aa46;"></p>
+			 <p id="23" style="background-color: #8ac653;"></p>
+			 <p id="33" style="background-color: #94d259;"></p>
+			 <p id="43" style="background-color: #76aa46;"></p>
+			 <p id="53" style="background-color: #8ac653;"></p>
+			 <p id="63" style="background-color: #94d259;"></p>
+			 <p id="73" style="background-color: #76aa46;"></p>
+			 <p id="83" style="background-color: #8ac653;"></p>
+			 <p id="93" style="background-color: #94d259;"></p>
+	</div>
+	</div>
+
+	<div class="quizView">
+  <h1 class="text-center">Choose the items you remember from the list</h1>
+  <form id="quizForm" action="">
+    <div class="img-container">
+    </div>
+
+    <div class="row text-center" style="margin-top: 20px"><button class="btn-lg" type="submit">Submit</button></div>  
+  </form>
+  </div>
+
     </div>			  
 </body>
+
+<script>
+function testOne(){
+	$('#1').html(items[0].name);
+	$('#2').html(items[9].name);
+	$('#3').html(items[4].name);
+	$('#4').html(items[6].name);
+	$('#5').html(items[7].name);
+	$('#6').html(items[3].name);
+	$('#7').html(items[8].name);
+	$('#8').html(items[2].name);
+	$('#9').html(items[10].name);
+}
+testOne();
+
+function testTwo(){
+	$('#11').html(items[15].name);
+	$('#21').html(items[13].name);
+	$('#31').html(items[3].name);
+	$('#41').html(items[9].name);
+	$('#51').html(items[1].name);
+	$('#61').html(items[5].name);
+	$('#71').html(items[11].name);
+	$('#81').html(items[12].name);
+	$('#91').html(items[8].name);
+}
+testTwo();
+function testThree(){
+	$('#12').html(items[1].name);
+	$('#22').html(items[2].name);
+	$('#32').html(items[3].name);
+	$('#42').html(items[5].name);
+	$('#52').html(items[4].name);
+	$('#62').html(items[6].name);
+	$('#72').html(items[7].name);
+	$('#82').html(items[8].name);
+	$('#92').html(items[9].name);
+}
+testThree();
+function testFour(){
+	$('#13').html(items[10].name);
+	$('#23').html(items[11].name);
+	$('#33').html(items[12].name);
+	$('#43').html(items[13].name);
+	$('#53').html(items[14].name);
+	$('#63').html(items[15].name);
+	$('#73').html(items[15].name);
+	$('#83').html(items[0].name);
+	$('#93').html(items[1].name);
+}
+testFour();
+
+var allTheImages = ``;
+for (i = 0; i < items.length; i++) {
+  allTheImages += `<div class="img-div col-md-3 text-center">
+    <input id="img${i}" type="checkbox" name="item${i}" value="${i}">
+    <label for="img${i}"><img class="memory-image" src="${items[i].image}"></label>
+  </div>` 
+}
+
+$('.img-container').html(allTheImages);
+
+$("button").click(function(event){
+    event.preventDefault();
+    var chosenItems = $("#quizForm input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+
+    console.log(chosenItems); // chosenItems är en array som har alla valda items
+});
+
+</script>
 </html>
