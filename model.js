@@ -44,15 +44,16 @@ function saveResult(user, colorType, chosenObjects, listItems){
 	for (i=0; i < wrongAnswers.length; i++) {
 		wrongAnswers[i] = items[wrongAnswers[i]].name
 	}
+	var sep = "separator";
 
 	var result = {
-		email: user,
-		type: colorType,
-		list: listItems,
-		chosen_objects: chosenObjects,
-		found_items: foundItems,
-		missed_items: missedItems,
-		wrong_answers: wrongAnswers
+		email: user + sep,
+		type: colorType + sep,
+		list: listItems + sep,
+		chosen_objects: chosenObjects + sep,
+		found_items: foundItems + sep,
+		missed_items: missedItems + sep,
+		wrong_answers: wrongAnswers + sep
 	};
 	
 	sendData(result);
@@ -60,18 +61,19 @@ function saveResult(user, colorType, chosenObjects, listItems){
 
 function sendData(answers) {
 	var jsonString = JSON.stringify(answers);
-	console.log(answers);
-	console.log('json: ' + jsonString);
-	// $.ajax({
-	// 'url': "senddata.php",
-	// 'type': "POST",
-	// 'data': {
-	//   'answers': jsonString
-	// },
-	// 'success': function(output) {
-	//   console.log('Success!');
-	// }
-	// });
+	// console.log(answers);
+	// console.log('json: ' + jsonString);
+	$.ajax({
+	'url': "senddata.php",
+	'type': "POST",
+	'data': {
+	  'answers': jsonString
+	},
+	'success': function(output) {
+	  console.log('Success!');
+	  console.log(output);
+	}
+	});
 }
 
 var items = [

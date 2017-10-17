@@ -40,13 +40,31 @@ $link = connectToDB();
 
 
 if (isset($_POST['answers'])) {
-	$data = explode("ans", $_POST['answers']);
-  natsort($data);
-  $mail = array_pop($data);
-  array_unshift($data, $mail);
+  $data = $_POST['answers'];
+  $data = explode("separator", $_POST['answers']);
 
 
-  // $query ="INSERT INTO perception (answer) VALUES ('.$data[0].')";
+  $list = array("email","type","list","chosen_objects","found_items","missed_items","wrong_answers");
+  foreach ($list as $word) {
+    $count = 0;
+    foreach($data as $row) {
+      $data[$count] = str_replace($word, '', $row);
+      $count += 1;
+    }
+  }
+
+  $count = 0;
+  foreach($data as $wat) {
+    $temp = preg_replace("/[^A-Za-z0-9]/", " ", $wat);
+    $data[$count] = preg_replace('/\s\s+/', ' ', $temp);
+    $count += 1;
+  }
+
+  print_r($data);
+
+
+
+  $query ="INSERT INTO perception (mail, type, wholelist, chosen, correct, missed, wrong) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]')";
 
 	execQuery($link,$query);
 }
