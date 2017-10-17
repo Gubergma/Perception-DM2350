@@ -68,6 +68,7 @@ function nextQuiz(){
 		setTimeout(timeOutList4,time)
 	}
 	else{
+		$('.middleView').hide();		
 		$('.end').show();
 	}
 	count = count+1;
