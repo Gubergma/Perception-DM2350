@@ -2,12 +2,6 @@ function saveResult(user, colorType, chosenObjects, listItems){
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
-	var result = {
-		email: user,
-		type: colorType,
-		list: listItems,
-		chosen_objects: chosenObjects
-	};
 	for (i = 0; i < chosenObjects.length; i++) {
 		var found = false;
 		for (j = 0; j < listItems.length; j++) {
@@ -34,9 +28,33 @@ function saveResult(user, colorType, chosenObjects, listItems){
 			missedItems.push(listItems[i])
 		}
 	}
-	result.found_items = foundItems;
-	result.missed_items = missedItems;
-	result.wrong_answers = wrongAnswers;
+
+	for (i=0; i < chosenObjects.length; i++) {
+		chosenObjects[i] = items[chosenObjects[i]].name
+	}
+	for (i=0; i < listItems.length; i++) {
+		listItems[i] = items[listItems[i]].name
+	}
+	for (i=0; i < foundItems.length; i++) {
+		foundItems[i] = items[foundItems[i]].name
+	}
+	for (i=0; i < missedItems.length; i++) {
+		missedItems[i] = items[missedItems[i]].name
+	}
+	for (i=0; i < wrongAnswers.length; i++) {
+		wrongAnswers[i] = items[wrongAnswers[i]].name
+	}
+
+	var result = {
+		email: user,
+		type: colorType,
+		list: listItems,
+		chosen_objects: chosenObjects,
+		found_items: foundItems,
+		missed_items: missedItems,
+		wrong_answers: wrongAnswers
+	};
+	
 	sendData(result);
 }
 
