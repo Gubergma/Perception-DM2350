@@ -71,7 +71,7 @@
   			<form id="quizForm">
     			<div class="img-container"></div>
 				<div class="row text-center" style="margin-top: 20px">
-					<button id="quizSubmit" class="btn btn-lg" type="submit" onclick="showHoldUp()">Submit</button>
+					<button id="quizSubmit" class="btn btn-lg" type="submit" onclick="showHoldUp()">Submit answers</button>
 				</div>  
   			</form>
   		</div>
@@ -84,7 +84,8 @@
 	  		<h1>You are all done! Thank you for participating!</h1>
 	  	</div>
 	  	<div class="welcome">
-	  		<p style="color: black;">Blablabla Perception DM2350 blablabla. You will now blablablalba. Color perception something something. Hej och hå braldjksajdkl. Testar layout när det är mycket text så måste fortsätta skriva lite lorem ipsum bullshit. Bacon är inte så gott.</p>
+	  		<h2>Welcome</h2>
+	  		<p style="color: black;">This study is done as part the course Perception DM2350. You will now blablablalba. Color perception something something. Hej och hå braldjksajdkl. Testar layout när det är mycket text så måste fortsätta skriva lite lorem ipsum bullshit. Bacon är inte så gott.</p>
 	  		<button class="btn-lg" style="font-family: Lato;" onclick="showHoldUp()">Start</button>
 	  	</div>
     </div>			  
@@ -158,8 +159,7 @@ $("#quizSubmit").click(function(event){
       return $(this).val();
     }).get();
     $('.checkboxes').prop('checked', false)
-    console.log(chosenItems); // chosenItems är en array som har alla valda items
-    // Gör anrop till result med chosen items
+    saveResult(colorType, chosenItems, currentTest)
 });
 
 

@@ -1,16 +1,11 @@
-var testOne = [0,9,4,6,7,3,8,2,10]
-var testTwo = [15,13,3,9,1,5,11,12,8]
-var testThree = [6,2,3,5,4,1,7,8,9]
-var testFour = [10,11,12,13,14,15,8,0,1]
-
-function saveResult(subjectId, colorType, chosenObjects, listItems){
-	// chosenObject and listItems []
+function saveResult(colorType, chosenObjects, listItems){
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
-		subject: subjectId,
 		type: colorType
+		list: listItems
+		chosen_objects: chosenObjects
 	};
 	for (i = 0; i < chosenObjects.length; i++) {
 		var found = false;
@@ -38,9 +33,9 @@ function saveResult(subjectId, colorType, chosenObjects, listItems){
 			missedItems.push(listItems[i])
 		}
 	}
-	result.foundItems = foundItems;
-	result.missedItems = missedItems;
-	result.wrongAnswers = wrongAnswers;
+	result.found_items = foundItems;
+	result.missed_items = missedItems;
+	result.wrong_answers = wrongAnswers;
 	return result
 }
 

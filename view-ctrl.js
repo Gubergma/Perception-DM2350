@@ -1,6 +1,12 @@
-var time = 5000; //amount of time the containter will be visable
-
+var time = 5000; //amount of time the shopping list will be visable
 var count = 1;
+var testTwoList = ["15","13","3","9","1","5","11","12","8"]
+var testThreeList = ["6","2","3","5","4","1","7","8","9"]
+var testFourList = ["10","13","12","11","14","15","8","0","1"]
+
+// data för dom första testen
+var colorType = 'disharmonious red'
+var currentTest = ["0","9","4","6","7","3","8","2","10"]
 
 function listToQuiz() {
 	//$('.all-lists').hide();
@@ -13,14 +19,20 @@ function timeOutList1(){
 }
 
 function timeOutList2(){
+	currentTest = testTwoList
+	colorType = 'harmonious red'
 	$('.shopping-list-2').hide();
 	$('.quizView').show();
 }
 function timeOutList3(){
+	currentTest = testThreeList
+	colorType = 'disharmonious green'
 	$('.shopping-list-3').hide();
 	$('.quizView').show();
 }
 function timeOutList4(){
+	currentTest = testFourList
+	colorType = 'harmonious green'
 	$('.shopping-list-4').hide();
 	$('.quizView').show();
 }
@@ -32,7 +44,6 @@ function timeOutList4(){
 // })
 
 function nextQuiz(){
-
 	if(count==1){	
 		$('.shopping-list-1').show();
 		$('.middleView').hide();
@@ -67,7 +78,6 @@ function showHoldUp(){
 	$('.middleView').show();
 	$('.quizView').hide();
 	$('.welcome').hide();		
-
 }
 
 
