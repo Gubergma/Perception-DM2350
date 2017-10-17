@@ -9,6 +9,7 @@ text-align: center;
 	border-bottom: thick dotted;
 	width: 50%;
 	margin: auto;
+	text-align: center;
 	margin-bottom: 20px;
 	font-family: 'Shadows Into Light';
 }
@@ -30,6 +31,51 @@ p{
 	color: white;
 	font-family: Lato;
 }
+.bg.dis-red {
+	background-color: #fc1520;
+}
+.odd.dis-red {
+	background-color: #c86162;
+	color: #fc1520;
+}
+.even.dis-red {
+	background-color: #89171a;
+	color: #fc1520;
+}
+.bg.har-red {
+	background-color: #b04244;
+}
+.odd.har-red {
+	background-color: #c64c4e;
+	color: #b04244;
+}
+.even.har-red {
+	background-color: #df5658;
+	color: #b04244;
+}
+.bg.dis-green {
+	background-color: #2cfd33;
+}
+.odd.dis-green {
+	background-color: #77c865;
+	color: #2cfd33;
+}
+.even.dis-green {
+	background-color: #308920;
+	color: #2cfd33;
+}
+.bg.har-green {
+	background-color: #76aa46;
+}
+.odd.har-green {
+	background-color: #8ac653;
+	color: #76aa46;
+}
+.even.har-green {
+	background-color: #94d259;
+	color: #76aa46;
+}
+
 
 .description{
 	font-family: Lato;
