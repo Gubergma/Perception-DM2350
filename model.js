@@ -42,6 +42,7 @@ function saveResult(colorType, chosenObjects, listItems){
 function sendData(answers) {
 	var jsonString = JSON.stringify(answers);
 	console.log(answers);
+	console.log('json: ' + jsonString);
 	// $.ajax({
 	// 'url': "senddata.php",
 	// 'type': "POST",
