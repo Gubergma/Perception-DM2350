@@ -71,7 +71,6 @@ function sendData(answers) {
 	},
 	'success': function(output) {
 	  console.log('Success!');
-	  console.log(output);
 	}
 	});
 }
