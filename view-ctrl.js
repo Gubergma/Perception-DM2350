@@ -14,6 +14,7 @@ function listToQuiz() {
 }
 
 function timeOutList1(){
+	$('.bg').removeClass('dis-red')
 	$('.shopping-list-1').hide();
 	$('.quizView').show();
 }
@@ -21,18 +22,21 @@ function timeOutList1(){
 function timeOutList2(){
 	currentTest = testTwoList
 	colorType = 'harmonious red'
+	$('.bg').removeClass('har-red')
 	$('.shopping-list-2').hide();
 	$('.quizView').show();
 }
 function timeOutList3(){
 	currentTest = testThreeList
 	colorType = 'disharmonious green'
+	$('.bg').removeClass('dis-green')
 	$('.shopping-list-3').hide();
 	$('.quizView').show();
 }
 function timeOutList4(){
 	currentTest = testFourList
 	colorType = 'harmonious green'
+	$('.bg').removeClass('har-green')
 	$('.shopping-list-4').hide();
 	$('.quizView').show();
 }
@@ -44,25 +48,26 @@ function timeOutList4(){
 // })
 
 function nextQuiz(){
-	if(count==1){	
+	if(count==1){
+		$('.bg').addClass('dis-red')
 		$('.shopping-list-1').show();
 		$('.middleView').hide();
 		setTimeout(timeOutList1,time)
 	}
 	else if(count==2){
-		//count = count+1;
+		$('.bg').addClass('har-red')
 		$('.shopping-list-2').show();
 		$('.middleView').hide();
 		setTimeout(timeOutList2,time)
 	}
 	else if(count==3){
-		//count = count+1;
+		$('.bg').addClass('dis-green')
 		$('.shopping-list-3').show();
 		$('.middleView').hide();
 		setTimeout(timeOutList3,time)
 	}
 	else if(count == 4){
-		//count = count+1;
+		$('.bg').addClass('har-green')
 		$('.shopping-list-4').show();
 		$('.middleView').hide();
 		setTimeout(timeOutList4,time)

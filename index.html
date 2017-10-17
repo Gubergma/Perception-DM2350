@@ -17,54 +17,54 @@
   <script src="model.js"></script>
 
 <body>
-	<div class="container">
-		<div class="header">
+	<div class="header">
 		<h1>GROCERY LIST</h1>
-		</div>
+	</div>
+	<div class="container bg">
 		<div class="all-lists">	
 			<div class="shopping-list-1" style="display: none">
-					 <p id="1" style="background-color: #fc1520;"></p>
-					 <p id="2" style="background-color: #c86162;"></p>
-					 <p id="3" style="background-color: #89171a;"></p>
-					 <p id="4" style="background-color: #fc1520;"></p>
-					 <p id="5" style="background-color: #c86162;"></p>
-					 <p id="6" style="background-color: #89171a;"></p>
-					 <p id="7" style="background-color: #fc1520;"></p>
-					 <p id="8" style="background-color: #c86162;"></p>
-					 <p id="9" style="background-color: #89171a;"></p>
+				 <p id="1" class="dis-red odd"></p>
+				 <p id="2" class="dis-red even"></p>
+				 <p id="3" class="dis-red odd"></p>
+				 <p id="4" class="dis-red even"></p>
+				 <p id="5" class="dis-red odd"></p>
+				 <p id="6" class="dis-red even"></p>
+				 <p id="7" class="dis-red odd"></p>
+				 <p id="8" class="dis-red even"></p>
+				 <p id="9" class="dis-red odd"></p>
 			</div>
-				<div class="shopping-list-2" style="display: none;">
-					 <p id="11" style="background-color: #b04244;"></p>
-					 <p id="21" style="background-color: #c64c4e;"></p>
-					 <p id="31" style="background-color: #df5658;"></p>
-					 <p id="41" style="background-color: #b04244;"></p>
-					 <p id="51" style="background-color: #c64c4e;"></p>
-					 <p id="61" style="background-color: #df5658;"></p>
-					 <p id="71" style="background-color: #b04244;"></p>
-					 <p id="81" style="background-color: #c64c4e;"></p>
-					 <p id="91" style="background-color: #df5658;"></p>
+			<div class="shopping-list-2" style="display: none;">
+				 <p id="11" class="har-red odd"></p>
+				 <p id="21" class="har-red even"></p>
+				 <p id="31" class="har-red odd"></p>
+				 <p id="41" class="har-red even"></p>
+				 <p id="51" class="har-red odd"></p>
+				 <p id="61" class="har-red even"></p>
+				 <p id="71" class="har-red odd"></p>
+				 <p id="81" class="har-red even"></p>
+				 <p id="91" class="har-red odd"></p>
 			</div>
-				<div class="shopping-list-3" style="display: none;">
-					 <p id="12" style="background-color: #2cfd33;"></p>
-					 <p id="22" style="background-color: #77c865;"></p>
-					 <p id="32" style="background-color: #308920;"></p>
-					 <p id="42" style="background-color: #2cfd33;"></p>
-					 <p id="52" style="background-color: #77c865;"></p>
-					 <p id="62" style="background-color: #308920;"></p>
-					 <p id="72" style="background-color: #2cfd33;"></p>
-					 <p id="82" style="background-color: #77c865;"></p>
-					 <p id="92" style="background-color: #308920;"></p>
+			<div class="shopping-list-3" style="display: none;">
+				 <p id="12" class="dis-green even"></p>
+				 <p id="22" class="dis-green odd"></p>
+				 <p id="32" class="dis-green even"></p>
+				 <p id="42" class="dis-green odd"></p>
+				 <p id="52" class="dis-green even"></p>
+				 <p id="62" class="dis-green odd"></p>
+				 <p id="72" class="dis-green even"></p>
+				 <p id="82" class="dis-green odd"></p>
+				 <p id="92" class="dis-green even"></p>
 			</div>
-				<div class="shopping-list-4" style="display: none;">
-					 <p id="13" style="background-color: #76aa46;"></p>
-					 <p id="23" style="background-color: #8ac653;"></p>
-					 <p id="33" style="background-color: #94d259;"></p>
-					 <p id="43" style="background-color: #76aa46;"></p>
-					 <p id="53" style="background-color: #8ac653;"></p>
-					 <p id="63" style="background-color: #94d259;"></p>
-					 <p id="73" style="background-color: #76aa46;"></p>
-					 <p id="83" style="background-color: #8ac653;"></p>
-					 <p id="93" style="background-color: #94d259;"></p>
+			<div class="shopping-list-4" style="display: none;">
+				 <p id="13" class="har-green even"></p>
+				 <p id="23" class="har-green odd"></p>
+				 <p id="33" class="har-green even"></p>
+				 <p id="43" class="har-green odd"></p>
+				 <p id="53" class="har-green even"></p>
+				 <p id="63" class="har-green odd"></p>
+				 <p id="73" class="har-green even"></p>
+				 <p id="83" class="har-green odd"></p>
+				 <p id="93" class="har-green even"></p>
 			</div>
 		</div>
 
@@ -99,7 +99,7 @@
 
 
 <script>
-	function testOne(){
+function testOne(){
 	$('#1').html(items[0].name);
 	$('#2').html(items[9].name);
 	$('#3').html(items[4].name);
