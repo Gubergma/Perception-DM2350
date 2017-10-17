@@ -1,8 +1,10 @@
 function saveResult(colorType, chosenObjects, listItems){
+	var user = $('#userID').val();
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
+		email: user,
 		type: colorType,
 		list: listItems,
 		chosen_objects: chosenObjects
