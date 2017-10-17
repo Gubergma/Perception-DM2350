@@ -13,10 +13,11 @@ text-align: center;
 	font-family: 'Shadows Into Light';
 }
 .header > h1{
-	font-size: 60px;
-	
+	font-size: 60px;	
 }
-
+.welcome-text{
+	font-size: 20px;
+}
 .all-lists{
 	text-transform: uppercase;
 	font-size: 25px;		 

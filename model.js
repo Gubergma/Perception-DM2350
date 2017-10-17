@@ -3,8 +3,8 @@ function saveResult(colorType, chosenObjects, listItems){
 	var missedItems = [];
 	var wrongAnswers = [];
 	var result = {
-		type: colorType
-		list: listItems
+		type: colorType,
+		list: listItems,
 		chosen_objects: chosenObjects
 	};
 	for (i = 0; i < chosenObjects.length; i++) {
