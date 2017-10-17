@@ -165,7 +165,8 @@ $("#quizSubmit").click(function(event){
       return $(this).val();
     }).get();
     $('.checkboxes').prop('checked', false)
-    saveResult(colorType, chosenItems, currentTest)
+    var user = $('#userID').val();
+    saveResult(user, colorType, chosenItems, currentTest)
 });
 
 

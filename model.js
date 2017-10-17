@@ -1,5 +1,4 @@
-function saveResult(colorType, chosenObjects, listItems){
-	var user = $('#userID').val();
+function saveResult(user, colorType, chosenObjects, listItems){
 	var foundItems = [];
 	var missedItems = [];
 	var wrongAnswers = [];
