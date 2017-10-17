@@ -36,10 +36,23 @@ function saveResult(colorType, chosenObjects, listItems){
 	result.found_items = foundItems;
 	result.missed_items = missedItems;
 	result.wrong_answers = wrongAnswers;
-	return result
+	sendData(result);
 }
 
-
+function sendData(answers) {
+	var jsonString = JSON.stringify(answers);
+	console.log(answers);
+	// $.ajax({
+	// 'url': "senddata.php",
+	// 'type': "POST",
+	// 'data': {
+	//   'answers': jsonString
+	// },
+	// 'success': function(output) {
+	//   console.log('Success!');
+	// }
+	// });
+}
 
 var items = [
 	{
